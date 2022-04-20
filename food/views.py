@@ -3,7 +3,9 @@ from .forms import RegisterForm
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
-
+    
+def menu(request):
+    return render(request,'menu.html')
 
 def register(response):
     if response.method == "POST":
