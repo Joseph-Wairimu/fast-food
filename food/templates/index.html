@@ -2,55 +2,88 @@
 
 
 {% block content %}
-<section class="home">
-<nav>
+<div >
+    <section class="home">
+        <nav>
+        
+           <p>Fast<span style="color: #D43828;">Foody</span></p>
+           <p><span style="color: #D43828;">Home</span></p>
+           <p>Menu</p>
+           <p>About Us</p>
+           <P>SignUP</P>
+        </nav>
+        <div>
+            <p class="foody">A good <span style="color: #D43828;">restaurant</span> is like a <br> vacation; it  <span style="color: #D43828;">transports</span> you, <br>
+                and it becomes a lot more than just <br> about the food. <br>
+                At Fast  <span style="color: #D43828;">Foody</span>  we Bring that Experience to you.
+            </p>
+        
+        </div>
+        
+        <button class="menu">menu</button>
+        <button class="signin">SignIn</button>
+        
+        
+        </section>
+        <style>
+            .home{
+        position: relative;
+        width: 863px;
+        height: 28rem;
+        top: 6rem;
+        left: 17%;
+        
+        
+        background: rgba(35, 30, 30, 0.7);
+        border-radius: 20px;
+            }
+        nav{
+            justify-content: space-evenly;
+            display: flex;
+            padding-top:1.5rem ;
+            color: white;
+        }
+            .foody{
+                color: white;
+                position: absolute;
+        width: 531px;
+        height: 254px;
+        left: 102px;
+        top: 100px;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 39px;
+            }
+            .menu{
+        
+                position: absolute;
+        width: 100px;
+        height: 37px;
+        left: 102px;
+        top: 340px;
+        
+        background: #D43828;
+        border-radius: 20px;
+        border: none;
+        color: white;
+        font-size: 15px;
+            }
+            .signin{
 
-   <p>Fast<span style="color: #D43828;">Foody</span></p>
-   <p><span style="color: #D43828;">Home</span></p>
-   <p>Menu</p>
-   <p>About Us</p>
-   <P>SignUP</P>
-</nav>
-<div>
-    <p class="foody">A good <span style="color: #D43828;">restaurant</span> is like a <br> vacation; it  <span style="color: #D43828;">transports</span> you, <br>
-        and it becomes a lot more than just <br> about the food. <br>
-        At Fast  <span style="color: #D43828;">Foody</span>  we Bring that Experience to you.
-    </p>
 
+                position: absolute;
+        width: 100px;
+        height: 37px;
+        left: 15rem;
+        top: 340px;
+        
+        background: #D43828;
+        border-radius: 20px;
+        border: none;
+        color: white;
+        font-size: 15px;
+            }
+        </style>
 </div>
 
-
-
-
-</section>
-<style>
-    .home{
-position: relative;
-width: 863px;
-height: 507px;
-top: 6rem;
-left: 17%;
-
-
-background: rgba(35, 30, 30, 0.7);
-border-radius: 20px;
-    }
-nav{
-    justify-content: space-evenly;
-    display: flex;
-    padding-top:1.5rem ;
-    color: white;
-}
-    .foody{
-        color: white;
-        position: absolute;
-width: 531px;
-height: 254px;
-left: 102px;
-top: 100px;
-font-weight: 400;
-font-size: 22px;
-line-height: 39px;
-    }
-</style>
 {% endblock %}
