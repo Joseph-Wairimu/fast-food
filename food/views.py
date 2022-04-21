@@ -45,8 +45,8 @@ def products(request):
         n = len(prod)
         nSlides = n // 4 + ceil((n / 4) - (n // 4))
         allProds.append([prod, range(1, nSlides), nSlides])
-    darshan = {'allProds': allProds}
-    return render(request,'product.html',darshan)
+    fastfood = {'allProds': allProds}
+    return render(request,'product.html',fastfood)
     
 
 
