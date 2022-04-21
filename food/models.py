@@ -19,7 +19,12 @@ class Profile(models.Model):
     post_date = models.DateTimeField(auto_now=True)
         
     def __str__(self):
-        return self.user   
+        return self.user.username  
+    def save_profile(self):
+        self.save()
+    def delete_profile(self):
+        self.delete()  
+
 
 #place order class
 class Orders(models.Model):
