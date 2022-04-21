@@ -1,3 +1,12 @@
+body {
+    background: linear-gradient(90deg, #2F591A 10.94%, #27321D 31.25%, #2F581A 65.1%, #231E1E 83.46%);
+}
+
+
+/* .card {
+    background-color: rgba(10, 10, 10, 0.7);
+} */
+
 .col-md-3 {
     display: inline-block;
     margin-left: -4px;
@@ -47,4 +56,22 @@ div.c {
     font-size: 20px;
     position: relative;
     left: 174px;
+}
+
+.product {
+    margin-top: 6rem;
+}
+
+nav {
+    position: absolute;
+    width: 70rem;
+    height: 55px;
+    left: 14%;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    color: antiquewhite;
+    background: #D43828;
+    border-radius: 0px 0px 20px 20px;
+    padding: 1rem;
 }
