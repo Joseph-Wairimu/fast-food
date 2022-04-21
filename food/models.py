@@ -29,7 +29,6 @@ class Profile(models.Model):
 #place order class
 class Orders(models.Model):
     order_id = models.AutoField(primary_key=True)
-    items_json = models.CharField(max_length=5000)
     userId = models.IntegerField(default=0)
     amount = models.IntegerField(default=0)
     name = models.CharField(max_length=90)

@@ -12,6 +12,8 @@ class RegisterForm(UserCreationForm):
         fields=["username","email","password1","password2"]
 
 
+
+
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
@@ -33,4 +35,7 @@ class ProductForm(forms.ModelForm):
 class OrderUpdateForm(forms.ModelForm):
     class Meta:
         model = OrderUpdate
+     
+
         fields=['order_id']         
+

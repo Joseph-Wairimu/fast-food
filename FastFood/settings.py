@@ -42,9 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'food.apps.FoodConfig',
+
+
     'tinymce',
+
     'cloudinary',
-    'crispy_forms',
+    
 ]
 
 MIDDLEWARE = [
