@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="me">
+    <nav>
+        <p class="fast">FastFoody</p>
+        <p class="home">Home</p>
+     <a  style="text-decoration: none;color: white;"  href="{%url 'menu'%}">   <p class="menu">Menu</p></a>  
+        <p class="about">AboutUs</p>
+        <p class="services">Services</p>
+        <p class="cart">Cart</p>
+      <a style="text-decoration: none;color: white;" href="/logout"><p class="log">Logout</p></a> 
+    
+    </nav>
+    <section class="sec">
+    <h4>Light Temptations</h4>
+  <div class="nood">
+    <div class="potato">
+        <div style="padding-top: 1.5rem;">
+            <h3>Potato</h3>
+            <p>French fries</p>
+            <p>Potato wedger</p>
+            <p>cheese balls</p>
+    
+        </div>
+        <img class="img-fluid" style="height: 10rem; width: 9rem;" src="../static/assets/potato.png" alt="">
+       <div style="padding-top: 3.7rem;padding-left: 2.5rem;">
+           <p>70</p>
+           <p>80</p>
+           <p>100</p>
+       </div>
+
+    </div>
+    <div class="potato" style="margin-left: 9rem;">
+        <div style="padding-top: 1.5rem;">
+            <h3>Noodles</h3>
+            <p>Cavatappi</p>
+            <p>Penne</p>
+            <p>Maccheroni</p>
+    
+        </div>
+        <img class="img-fluid" style="height: 10rem; width: 9rem; padding-top: 1.5rem;" src="../static/assets/noodles.png" alt="">
+       <div style="padding-top: 3.7rem;padding-left: .7rem;">
+           <p>90</p>
+           <p>100</p>
+           <p>120</p>
+       </div>
+
+    </div>
+
+
+  </div>  
+   
+
+  <div class="nood">
+    <div class="potato">
+        <div style="padding-top: 1.5rem;">
+            <h3>Sandwich</h3>
+            <p>Ham Sandwich</p>
+            <p>Seafood Sandwich</p>
+            <p>Grilled Chicken Sandwich</p>
+    
+        </div>
+        <img class="img-fluid" style="height: 8rem; width: 7rem;padding-top: 1.5rem;" src="../static/assets/sandwich.png" alt="">
+       <div style="padding-top: 3.7rem;">
+           <p>60</p>
+           <p>70</p>
+           <p>100</p>
+       </div>
+
+    </div>
+    <div class="potato" style="margin-left: 9rem;">
+        <div style="padding-top: 1.5rem;">
+            <h3>Rice</h3>
+            <p>Parboiled Rice</p>
+            <p>Jasmine</p>
+            <p>Arborio</p>
+    
+        </div>
+        <img class="img-fluid" style="height: 10rem; width: 9rem; padding-top: 1.5rem;" src="../static/assets/rice.png" alt="">
+       <div style="padding-top: 3.7rem;padding-left: 1.5rem;">
+           <p>50</p>
+           <p>90</p>
+           <p>130</p>
+       </div>
+
+    </div>
+
+
+  </div>  
+
+
+  <div class="nood">
+    <div class="potato">
+        <div style="padding-top: 1.5rem;">
+            <h3>Nachos</h3>
+            <p>Jalapenos</p>
+            <p>Soul Cream</p>
+            <p>Sliced scallions</p>
+    
+        </div>
+        <img class="img-fluid" style="height: 10rem; width: 9rem;" src="../static/assets/nachos.png" alt="">
+       <div style="padding-top: 3.7rem;padding-left: 2.5rem;">
+           <p>70</p>
+           <p>100</p>
+           <p>100</p>
+       </div>
+
+    </div>
+    <div class="potato" style="margin-left: 9rem;">
+        <div style="padding-top: 1.5rem;">
+            <h3>Pizza</h3>
+            <p>Greek Piza</p>
+            <p>Detroit Pizza</p>
+            <p>Neapolitan Pizza</p>
+    
+        </div>
+        <img class="img-fluid" style="height: 10rem; width: 9rem; padding-top: 1.5rem;" src="../static/assets/pizza.png" alt="">
+       <div style="padding-top: 3.7rem;">
+           <p>700</p>
+           <p>800</p>
+           <p>900</p>
+       </div>
+
+    </div>
+
+
+  </div>  
+  <div class="nood">
+    <div class="potato">
+        <div style="padding-top: 1.5rem;">
+            <h3>Burger</h3>
+            <p>Pizza Burger</p>
+            <p>Potato Corn Burger</p>
+            <p>Stuffed Bean Burger</p>
+    
+        </div>
+        <img class="img-fluid" style="height: 10rem; width: 9rem;" src="../static/assets/burger.png" alt="">
+       <div style="padding-top: 3.7rem;">
+           <p>300</p>
+           <p>350</p>
+           <p>400</p>
+       </div>
+
+    </div>
+    <div class="potato" style="margin-left: 9rem;">
+        <div style="padding-top: 1.5rem;">
+            <h3>Roll</h3>
+            <p>Lobster Roll</p>
+            <p>Hot Dog Bun</p>
+            <p>Mini Hot Dog Bun</p>
+    
+        </div>
+        <img class="img-fluid" style="height: 10rem; width: 9rem; padding-top: 1.5rem;" src="../static/assets/roll.png" alt="">
+       <div style="padding-top: 3.7rem;">
+           <p>100</p>
+           <p>100</p>
+           <p>100</p>
+       </div>
+
+    </div>
+
+
+  </div>      
+    </section>
+    
+    
+    
+    <style>
+        nav{
+            position: absolute;
+            width: 70rem;
+            height: 55px;
+            left: 7%;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            color: antiquewhite;
+            background: #D43828;
+            border-radius: 0px 0px 20px 20px;
+            padding: 1rem;
+    
+        }
+        .potato{
+            display: flex;
+            padding-left: 5rem;
+            color: white;
+            }
+            .nood{
+                display: flex;
+            }
+                    .sec{
+            position: absolute;
+    width: 1090px;
+    height: auto;
+    left: 8.5%;
+    top: 154px;
+  
+    background: rgba(35, 30, 30, 0.7);
+    border-radius: 20px;
+        }
+    h4{
+        text-align: center;
+        margin-top:2rem ;
+        color: rgba(212, 56, 40, 1);
+        font-family: 'IM FELL DW Pica';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 129.52%;
+    }
+    </style>
+</div>
+
+{% endblock %}

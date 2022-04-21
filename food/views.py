@@ -1,11 +1,24 @@
 from django.shortcuts import render,redirect
+
 from math import ceil
 from django.contrib.auth.models import User
 from .forms import RegisterForm,ProfileForm,OrdersForm,ProductForm,OrderUpdateForm
-from .models import Profile,Orders,Product,OrderUpdate  
+ 
+
+from .forms import RegisterForm
+from django.contrib.auth.decorators import login_required
+from .models import Profile,Orders,OrderUpdate,Product
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
+    
+@login_required(login_url='login') 
+def menu(request):
+    return render(request,'menu.html')
+
+def services(request):
+    return render(request,'services.html')
 
 
 def register(response):
@@ -22,9 +35,19 @@ def register(response):
     return render(response, 'register/register.html', {'form': form})
 
 
+
 def products(request):
     products = Product.objects.values('category', 'id')
     current_user = request.user
     return render(request,'product.html',{ "products":products})
     
+
+
+def profile(request):
+    return render(request,'profile.html')
+
+def order(request):
+
+
+    return render(request,'order.html')
 
