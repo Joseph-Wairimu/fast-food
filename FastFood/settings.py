@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'food.apps.FoodConfig',
-    'crispy_forms',
+    
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +76,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'FastFood.wsgi.application'
 
+cloudinary.config( 
+  cloud_name = "dpusync50", 
+  api_key = "844883543182319", 
+  api_secret = "0ZkV4QOC5yPqtDdIUSC2ItHlBRs" 
+)
+
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -80,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fastfood',
         'USER': 'moringa',
-    'PASSWORD':'Access',
+    'PASSWORD':'Kimachas',
     }
 }
 
