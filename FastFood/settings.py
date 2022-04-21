@@ -92,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fastfood',
         'USER': 'moringa',
-    'PASSWORD':'moringa',
+    'PASSWORD':'Access',
     }
 }
 
