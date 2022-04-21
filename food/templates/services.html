@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="me">
+    <nav>
+        <p class="fast">FastFoody</p>
+        <p class="home">Home</p>
+     <a  style="text-decoration: none;color: white;"  href="{%url 'menu'%}">   <p class="menu">Menu</p></a>  
+     <a  style="text-decoration: none;color: white;"  href="{%url 'about'%}">   <p class="menu">About-Us</p></a>  
+        <a  style="text-decoration: none;color: white;"  href="{%url 'services'%}">   <p class="menu">Services</p></a>  
+     
+        <p class="cart">Cart</p>
+      <a style="text-decoration: none;color: white;" href="/logout"><p class="log">Logout</p></a> 
+    
+    </nav>
+    <section class="sec">
+   <h2 style="text-align: center; color: aliceblue; padding-top: 2rem;">Our Services</h2>
+   <div class="service">
+            <div>
+              <img style="height: 28rem; padding-bottom: 3rem;" src="https://res.cloudinary.com/dxeahbkr4/image/upload/v1650569314/service_ej6dvx.png" alt="">
+            </div>
+            <div>
+
+                <div>
+                    <i class="fa fa-motorcycle moto" aria-hidden="true"></i>
+                    <h5 class="faste">Fast Delivery</h5> 
+                    <p class="promise">Promise to deliver <br> within 30mins</p>
+     
+                </div>
+              <div>
+                <i class="fa fa-shopping-cart carts" aria-hidden="true"></i>
+                <h5 class="pick">Pick Up</h5>  
+                <p class="door">Pickup delivery <br> at your doorsteps</p>
+              </div>
+              <div>
+                <i  class="fa fa-cutlery knife" aria-hidden="true"></i>
+                  <h5 class="dine">Dine-In</h5>
+                  <p class="fresh">Enjoy your food <br> fresh,crispy & hot</p>
+
+              </div>
+            </div>
+        
+   </div>
+       
+    </section>
+    
+    
+    
+    <style>
+        .moto{
+            position: absolute;
+            width: 60px;
+            height: 54px;
+            left: 44rem;
+            top: 9rem;
+            font-size: 6rem;
+            color: black;
+        }
+        .carts{
+            position: absolute;
+            width: 92px;
+            height: 82px;
+            left: 37rem;
+            top: 18rem;
+            font-size: 6rem;
+            color: black;
+
+        }
+        .knife{
+            position: absolute;
+            width: 102px;
+            height: 93px;
+            left: 45rem;
+            top: 25rem;
+            font-size: 7rem;
+            color: black;
+
+        }
+        .fresh{
+             position: absolute;
+           
+            left: 53rem;
+            top: 27rem;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+        }
+        .dine{
+            position: absolute;
+            width: 133px;
+            height: 30px;
+            left: 53rem;
+            top: 24rem;
+
+            font-family: 'IM FELL DW Pica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            /* identical to box height */
+
+
+                color: #D43828;
+
+        }
+        .door{
+            position: absolute;
+           
+           left: 45rem;
+           top: 19rem;
+           font-family: 'Inconsolata', monospace;
+            font-weight: 600;
+            font-size: 18px;
+           line-height: 25px;
+           color: #FFFFFF;
+        }
+        .pick{
+            position: absolute;
+            width: 83px;
+            height: 30px;
+            left: 42rem;
+            top: 16rem;
+            font-family: 'IM FELL DW Pica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            /* identical to box height */
+            color: #D43828;
+}
+        .faste{
+            position: absolute;
+            width: 133px;
+            height: 30px;
+            left: 50rem;
+            top: 8rem;
+
+            font-family: 'IM FELL DW Pica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            /* identical to box height */
+
+
+                color: #D43828;
+
+        }
+        .promise{
+            position: absolute;
+           
+            left: 54rem;
+            top: 10rem;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+            
+        }
+        nav{
+            position: absolute;
+            width: 70rem;
+            height: 55px;
+            left: 7%;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            color: antiquewhite;
+            background: #D43828;
+            border-radius: 0px 0px 20px 20px;
+            padding: 1rem;
+    
+        }
+        .sec{
+            position: absolute;
+            width: 1090px;
+            height: auto;
+            left: 8.5%;
+            top: 120px;
+            background: rgba(35, 30, 30, 0.7);
+            border-radius: 20px;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 600;
+        }
+     .service{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3rem;
+        padding-left: 2rem;
+        color: white;
+        font-family: 'Inconsolata', monospace;
+            font-weight: 600;
+     }
+    </style>
+</div>
+
+{% endblock %}

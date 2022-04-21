@@ -19,7 +19,8 @@ def menu(request):
 
 def services(request):
     return render(request,'services.html')
-
+def about_us(request):
+    return render(request, 'about.html')
 
 def register(response):
     if response.method == "POST":
