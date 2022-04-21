@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <nav>
+        <p class="fast">FastFoody</p>
+        <a href="{%url 'products'%}" style="color: #D43828; text-decoration: none;"> <p>Home</p></a>
+     <a  style="text-decoration: none;color: white;"  href="{%url 'menu'%}">   <p class="menu">Menu</p></a>  
+     <a  style="text-decoration: none;color: white;"  href="{%url 'about'%}">   <p class="menu">About-Us</p></a>  
+        <a  style="text-decoration: none;color: white;"  href="{%url 'services'%}">   <p class="menu">Services</p></a>  
+        <p class="cart">Cart</p>
+      <a style="text-decoration: none;color: white;" href="/logout"><p class="log">Logout</p></a> 
+    
+    </nav>
+
+
+    <section class="sec">
+        {% if profile %}
+        {% for image in profile %}
+
+        <div class="row new">
+            <div class="col-md-4 ">
+                <div class="card">
+                    <img class="card-img-top" src="{{image.image.url}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: black;"><span style="font-weight: bold;">User:</span>{{image.user}}</h5>
+                        <p style="color: black;" > <span  style="font-weight: bold;">Job-title~</span> {{image.job_title}}</p>
+                            <p style="color: black;" > <span  style="font-weight: bold;">Bio~</span> {{image.bio}}</p>
+                            <p style="color: black;" > <span  style="font-weight: bold;">Date~</span> {{image.dateupdated}}</p>
+
+                        
+
+                        
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h1>No profile details</h1>
+        {% endif %}
+
+
+
+
+
+    </section>
+
+
+
+
+
+<style>
+           nav{
+                position: absolute;
+                width: 70rem;
+                height: 55px;
+                left: 7%;
+                top: 0px;
+                display: flex;
+                justify-content: space-between;
+                color: antiquewhite;
+                background: #D43828;
+                border-radius: 0px 0px 20px 20px;
+                padding: 1rem;        
+               }
+               .sec{
+                position: absolute;
+                width: 1090px;
+                height: auto;
+                left: 8.5%;
+                top: 120px;
+                font-family: 'Inconsolata', monospace;
+                font-weight: 600;
+                background: rgba(35, 30, 30, 0.7);
+                border-radius: 20px;
+        }
+       
+</style>
+</div>
+
+{% endblock %}
+
+
+
+

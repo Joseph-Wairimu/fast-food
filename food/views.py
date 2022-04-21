@@ -68,12 +68,19 @@ def one_image(request, myid):
 
 
 def profile(request):
-    return render(request,'profile.html')
+    current_user = request.user
+    profile = Profile.objects.filter(user=current_user).first()
+    orders = Orders.objects.filter(user=current_user).all()
+    order_update = OrderUpdate.objects.filter(user=current_user).all()
+    products = Product.objects.all()
+    context = {'profile':profile,'orders':orders,'order_update':order_update,'products':products}
+    return render(request,'profile.html',context)
 
-def order(request):
+   
 
 
-    return render(request,'order.html')
+
+    
 def checkout(request):
     current_user = request.user
     form = OrdersForm(request.POST, request.FILES)
@@ -124,4 +131,5 @@ def checkout(request):
         
 #             return render(request, 'checkout.html', {'thank': thank, 'id': id})
 #     return render(request, 'checkout.html')
+
 

@@ -8,6 +8,7 @@ from tinymce.models import HTMLField
 # Create your models here.
 #profile model
 class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile',null=True)
     msg_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     email = models.CharField(max_length=70, default="")
@@ -18,7 +19,12 @@ class Profile(models.Model):
     post_date = models.DateTimeField(auto_now=True)
         
     def __str__(self):
-        return self.user   
+        return self.user.username  
+    def save_profile(self):
+        self.save()
+    def delete_profile(self):
+        self.delete()  
+
 
 #place order class
 class Orders(models.Model):

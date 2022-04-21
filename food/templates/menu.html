@@ -4,7 +4,7 @@
     <div class="me">
         <nav>
             <p class="fast">FastFoody</p>
-            <p class="home">Home</p>
+            <a href="{%url 'products'%}" style="color: #ffffff; text-decoration: none;"> <p>Home</p></a>
          <a  style="text-decoration: none;color: white;"  href="{%url 'menu'%}">   <p class="menu">Menu</p></a>  
          <a  style="text-decoration: none;color: white;"  href="{%url 'about'%}">   <p class="menu">About-Us</p></a>  
             <a  style="text-decoration: none;color: white;"  href="{%url 'services'%}">   <p class="menu">Services</p></a>  
@@ -185,6 +185,8 @@
                 display: flex;
                 padding-left: 5rem;
                 color: white;
+                font-family: 'Inconsolata', monospace;
+               font-weight: 600;
                 }
                 .nood{
                     display: flex;
@@ -203,9 +205,8 @@
             text-align: center;
             margin-top:2rem ;
             color: rgba(212, 56, 40, 1);
-            font-family: 'IM FELL DW Pica';
-            font-style: normal;
-            font-weight: 400;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 600;
             font-size: 26px;
             line-height: 129.52%;
         }

@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'food.apps.FoodConfig',
 
-    'bootstrap5',
 
     'tinymce',
 
@@ -96,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fastfood',
         'USER': 'moringa',
-    'PASSWORD':'kimachas',
+    'PASSWORD':'Access',
     }
 }
 

@@ -20,7 +20,7 @@
     <div class="container">
         <nav>
             <p class="fast">FastFoody</p>
-            <p class="home">Home</p>
+            <a href="{%url 'products'%}" style="color: #ffffff; text-decoration: none;"> <p>Home</p></a>
             <a style="text-decoration: none;color: white;" href="{%url 'menu'%}">
                 <p class="menu">Menu</p>
             </a>
@@ -90,6 +90,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
     </script>
+    <style>nav {
+        position: absolute;
+        width: 70rem;
+        height: 55px;
+        left: 7%;
+        top: 0px;
+        display: flex;
+        justify-content: space-between;
+        color: antiquewhite;
+        background: #D43828;
+        border-radius: 0px 0px 20px 20px;
+        padding: 1rem;
+    }</style>
 </body>
 
 </html>
