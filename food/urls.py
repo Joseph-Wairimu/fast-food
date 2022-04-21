@@ -6,9 +6,8 @@ urlpatterns = [
 
    path('products/', views.products, name='products'),
    
-
-
-   path('food/menu',views.menu,name='menu')
+   path('imagedetails/<myid>', views.one_image, name='imagedetails'),
+   path('food/menu',views.menu,name='menu'),
 
 
 ]

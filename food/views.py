@@ -49,6 +49,22 @@ def products(request):
     return render(request,'product.html',fastfood)
     
 
+# def productView(request, myid):
+#     try:
+#         product = Product.objects.filter(id=myid)
+#     except ObjectDoesNotExist:
+#         raise Http404()
+
+    
+#     return render(request, 'prodview.html', {'product': product})
+def one_image(request, myid):
+    try:
+        image = Product.objects.filter(id=myid)
+    except ObjectDoesNotExist:
+        raise Http404()
+
+    return render(request, 'prodview.html', {'image': image})
+
 
 def profile(request):
     return render(request,'profile.html')

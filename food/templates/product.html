@@ -58,7 +58,7 @@
                                         <span id="divpr{{i.id}}" class="divpr">
                                         <button id="pr{{i.id}}" class="btn btn-primary cart">Add to Cart</button>
                                     </span>
-                                        <a href=""> <button id="qv{{i.id}}" class="btn btn-primary cart">Quick View</button> </a>
+                                        <a href="{% url 'imagedetails' i.id %}"> <button id="qv{{i.id}}" class="btn btn-primary cart">Quick View</button> </a>
                                     </div>
                                 </div>
                             </div>
