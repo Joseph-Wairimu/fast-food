@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'food.apps.FoodConfig',
     'tinymce',
     'cloudinary',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
