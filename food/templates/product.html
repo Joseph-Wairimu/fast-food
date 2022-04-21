@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block title%} Home - Food Mania{% endblock %} {% block css %}{% endblock %} {% block body %} {% load static %}
+
+<div class="container">
+    hello
+    <!--Slideshow starts here -->
+    {% for product in products %}
+    <h3>{{product.category}}</h3>
+
+    {% endfor %}
+</div>
+
+</div>
+{% endblock %}
