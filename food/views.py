@@ -1,9 +1,13 @@
 from django.shortcuts import render,redirect
 from .forms import RegisterForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
-
+    
+@login_required(login_url='login') 
+def menu(request):
+    return render(request,'menu.html')
 
 def register(response):
     if response.method == "POST":
