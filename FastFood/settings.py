@@ -42,9 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'food.apps.FoodConfig',
+
+    'bootstrap5',
+
     'tinymce',
+
     'cloudinary',
-    'crispy_forms',
+    
 ]
 
 MIDDLEWARE = [
@@ -92,7 +96,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fastfood',
         'USER': 'moringa',
-    'PASSWORD':'Access',
+    'PASSWORD':'kimachas',
     }
 }
 
