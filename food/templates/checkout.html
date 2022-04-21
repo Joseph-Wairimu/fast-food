@@ -1,23 +1,64 @@
 {% load bootstrap5 %} {% load static%} {% block content%}
-<div class="container">
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <div class="text-center mt-5">
-                <h1> My Awesome Cart Express Checkout - Review Your Cart items</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a70663aaec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/products.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <nav>
+            <p class="fast">FastFoody</p>
+            <p class="home">Home</p>
+            <a style="text-decoration: none;color: white;" href="{%url 'menu'%}">
+                <p class="menu">Menu</p>
+            </a>
+            <p class="about">AboutUs</p>
+            <a style="text-decoration: none;color: white;" href="">
+                <p class="menu">Services</p>
+            </a>
+            <p class="cart">Cart</p>
+            <a style="text-decoration: none;color: white;" href="/logout">
+                <p class="log">Logout</p>
+            </a>
+            <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-html="true" data-toggle="popover" title="MyCart" data-placement="bottom" data-content="Bottom popover">
+                Cart(<span id="cart">0</span>)
+              </button>
+        </nav>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="text-center form mt-5">
+                    <h1> My Awesome Cart Express Checkout - Review Your Cart items</h1>
+                    <h3>Enter Address & Other Details</h3>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <h3>Enter Address & Other Details</h3>
-            <div class="prof-body mt-5">
-                <form action="{% url 'checkout' %}" method="post" enctype="multipart/form-data">
-                    {% csrf_token%} {% bootstrap_form form %}
-                    <div class="form-group text-center">
-                        <input type="submit" class="m-4 btn btn-primary new-btn" value="Checkout">
-                    </div>
-                    <input type="hidden" name="next" value="{{next}}">
-                </form>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+                <div class="prof-body mt-5">
+                    <form action="{% url 'checkout' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token%} {% bootstrap_form form %}
+                        <div class="form-group text-center">
+                            <input type="submit" class="m-4 btn btn-primary new-btn" value="Checkout">
+                        </div>
+                        <input type="hidden" name="next" value="{{next}}">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</body>
+
+</html>
 {% endblock %}
