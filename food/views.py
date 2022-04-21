@@ -13,7 +13,7 @@ from .models import Profile,Orders,OrderUpdate,Product
 def index(request):
     return render(request, 'index.html')
     
-@login_required(login_url='login') 
+
 def menu(request):
     return render(request,'menu.html')
 
@@ -37,9 +37,16 @@ def register(response):
 
 
 def products(request):
-    products = Product.objects.values('category', 'id')
-    current_user = request.user
-    return render(request,'product.html',{ "products":products})
+    allProds = []
+    catprods = Product.objects.values('category', 'id')
+    cats = {item['category'] for item in catprods}
+    for cat in cats:
+        prod = Product.objects.filter(category=cat)
+        n = len(prod)
+        nSlides = n // 4 + ceil((n / 4) - (n // 4))
+        allProds.append([prod, range(1, nSlides), nSlides])
+    darshan = {'allProds': allProds}
+    return render(request,'product.html',darshan)
     
 
 

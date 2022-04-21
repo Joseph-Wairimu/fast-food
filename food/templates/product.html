@@ -1,13 +1,68 @@
-{% extends 'base.html' %} {% block title%} Home - Food Mania{% endblock %} {% block css %}{% endblock %} {% block body %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container">
-    hello
-    <!--Slideshow starts here -->
-    {% for product in products %}
-    <h3>{{product.category}}</h3>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/products.css">
+    <title>Document</title>
+</head>
 
-    {% endfor %}
-</div>
+<body>
 
-</div>
-{% endblock %}
+
+    <div class="container">
+        <!--Slideshow starts here -->
+        {% for product, range, nSlides in allProds %}
+        <h3 class="my-4">{{product.0.category}}</h3>
+        <div class="row">
+            <div id="demo{{forloop.counter}}" class="col carousel slide my-3" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
+                    {% for i in range %}
+                    <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to="{{i}}"></li>
+                    {% endfor %}
+                </ul>
+                <div class="container carousel-inner no-padding">
+                    <div class="carousel-item active">
+                        {% for i in product %}
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                            <div class="card align-items-center" style="width: 18rem;">
+                                <img src='{{i.image.url}}'>
+                                <div class="card-body">
+                                    <h5 class="card-title" id="namepr{{i.id}}">{{i.product_name|slice:"0:20"}}...</h5>
+                                    <h6 style="color: #ff0000">Rs. <i id="pricepr{{i.id}}">{{i.price}}</i>/-</h6>
+                                    <p class="card-text">{{i.desc|slice:"0:23"}}...</p>
+                                    <span id="divpr{{i.id}}" class="divpr">
+                                        <button id="pr{{i.id}}" class="btn btn-primary cart">Add to Cart</button>
+                                    </span>
+                                    <a href=""> <button id="qv{{i.id}}" class="btn btn-primary cart">Quick View</button> </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+                    </div>
+                    <div class="carousel-item">
+                        {% endif %} {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- left and right controls for the slide -->
+            <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>

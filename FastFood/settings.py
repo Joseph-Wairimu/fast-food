@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'tinymce',
 
     'cloudinary',
-    'crispy_forms',
+    
 ]
 
 MIDDLEWARE = [
