@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
-from .forms import RegisterForm
+from .forms import RegisterForm,ProfileForm
+from .models import Profile
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -17,3 +18,4 @@ def register(response):
     else:
         form = RegisterForm()
     return render(response, 'register/register.html', {'form': form})
+
