@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <nav>
+        <p class="fast">FastFoody</p>
+        <p class="home">Home</p>
+     <a  style="text-decoration: none;color: white;"  href="{%url 'menu'%}">   <p class="menu">Menu</p></a>  
+     <a  style="text-decoration: none;color: white;"  href="{%url 'about'%}">   <p class="menu">About-Us</p></a>  
+        <a  style="text-decoration: none;color: white;"  href="{%url 'services'%}">   <p class="menu">Services</p></a>  
+        <p class="cart">Cart</p>
+      <a style="text-decoration: none;color: white;" href="/logout"><p class="log">Logout</p></a> 
+    
+    </nav>
+
+
+    <section class="sec">
+<h3 class="h">About Us</h3>
+<p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla a est 
+     iste molestiae praesentium non fugit quo facere porro, sit saepe nobis 
+     omnis corporis architecto autem nisi ratione repellendus deserunt? Lorem ipsum dolor sit amet consectetur, 
+     adipisicing elit. Ullam, aliquid mollitia architecto nesciunt 
+     esse obcaecati natus qui nisi vel. Earum ratione fugiat 
+    !</p>
+    <div class="d-flex">
+            <div>
+
+                <h3>OUr Mission</h3>
+                <p class="mission">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae provident hic consequatur id 
+                    nostrum dicta ad numquam aspernatur quam ipsum non incidunt dolore doloremque illum laboriosam,
+                    maiores recusandae adipisci culpa.
+                </p>
+
+            </div>
+            <div>
+                <div class="d-flex">
+                    <div>
+                        <img style="height: 10rem;" src="https://res.cloudinary.com/dxeahbkr4/image/upload/v1650570300/istockphoto-505968884-170667a_inpamq.jpg" alt="">
+
+                    </div>
+                    <div>
+                        <img style="height: 10rem; margin-left: 6rem;"  src="https://res.cloudinary.com/dxeahbkr4/image/upload/v1650570300/istockphoto-693280570-170667a_ralirc.jpg" alt="">
+
+                    </div>
+                </div>
+          <img style="height: 10rem; width: 36rem; margin-top: 2rem; margin-right: 2rem;"  src="https://res.cloudinary.com/dxeahbkr4/image/upload/v1650570320/photo-1609534751961-f396ded2af99_ftbyws.jpg" alt="">
+
+            </div>
+    </div>
+
+
+
+
+    </section>
+
+
+
+
+
+<style>
+           nav{
+                position: absolute;
+                width: 70rem;
+                height: 55px;
+                left: 7%;
+                top: 0px;
+                display: flex;
+                justify-content: space-between;
+                color: antiquewhite;
+                background: #D43828;
+                border-radius: 0px 0px 20px 20px;
+                padding: 1rem;        
+               }
+               .sec{
+                position: absolute;
+                width: 1090px;
+                height: auto;
+                left: 8.5%;
+                top: 120px;
+                font-family: 'Inconsolata', monospace;
+                font-weight: 600;
+                background: rgba(35, 30, 30, 0.7);
+                border-radius: 20px;
+        }
+        .h{
+            text-align: center;
+            color: aliceblue;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 600;
+            
+        }
+        .lorem{
+            padding:1rem 5rem;
+            color: aliceblue;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 600;
+        }
+        h3{
+            color: aliceblue;
+            padding:0rem 5rem;
+            font-family: 'Inconsolata', monospace;
+            font-weight: 600;
+        }
+          .mission{
+              color: aliceblue;
+              padding:0rem 5rem;
+              font-family: 'Inconsolata', monospace;
+              font-weight: 600;
+          }
+</style>
+</div>
+
+{% endblock %}
+
+
+
+
