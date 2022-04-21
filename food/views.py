@@ -80,7 +80,7 @@ def profile(request):
 
 
 
-    return render(request,'order.html')
+    
 def checkout(request):
     current_user = request.user
     form = OrdersForm(request.POST, request.FILES)
