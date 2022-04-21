@@ -28,9 +28,14 @@ def register(response):
         form = RegisterForm()
     return render(response, 'register/register.html', {'form': form})
 def profile(request):
-    return render(request,'profile.html')
+    current_user = request.user
+    profile = Profile.objects.filter(user=current_user).first()
+    orders = Orders.objects.filter(user=current_user).all()
+    order_update = OrderUpdate.objects.filter(user=current_user).all()
+    products = Product.objects.all()
+    context = {'profile':profile,'orders':orders,'order_update':order_update,'products':products}
+    return render(request,'profile.html',context)
 
-def order(request):
+   
 
 
-    return render(request,'order.html')

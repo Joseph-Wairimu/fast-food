@@ -8,6 +8,7 @@ from tinymce.models import HTMLField
 # Create your models here.
 #profile model
 class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile',null=True)
     msg_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     email = models.CharField(max_length=70, default="")
