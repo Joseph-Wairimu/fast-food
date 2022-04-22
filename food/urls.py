@@ -11,7 +11,6 @@ urlpatterns = [
    path('food/services',views.services,name='services'),
    path('food/about',views.about_us,name='about'),
    path('accounts/profile/',views.profile,name='profile'),
-   path('accounts/update',views.update_profile,name='update')
-
+   path('accounts/update',views.update_profile,name='update'),
 
 ]

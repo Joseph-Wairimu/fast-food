@@ -79,12 +79,12 @@ def profile(request):
     context = {'profile':profile}
     return render(request,'profile.html',context)
 
-
+@login_required(login_url='login') 
 def update_profile(request):
     current_user = request.user
     profile = Profile.objects.filter(user=current_user).first()
     if request.method == 'POST':
-        form = ProfileForm(request.POST, request.FILES)
+        form = ProfileForm(request.POST, request.FILES, instance=current_user)
         if form.is_valid():
             data = form.cleaned_data
             profile.user = current_user

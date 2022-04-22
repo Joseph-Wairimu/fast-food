@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div>
+    <nav>
+        <p class="fast">FastFoody</p>
+        <a href="{%url 'products'%}" style="color: #ffffff; text-decoration: none;"> <p>Home</p></a>
+     <a  style="text-decoration: none;color: white;"  href="{%url 'menu'%}">   <p class="menu">Menu</p></a>  
+     <a  style="text-decoration: none;color: white;"  href="{%url 'about'%}">   <p class="menu">About-Us</p></a>  
+        <a  style="text-decoration: none;color: white;"  href="{%url 'services'%}">   <p class="menu">Services</p></a>  
+        <a  style="text-decoration: none;color: white;"  href="{%url 'profile'%}">   <p class="menu">profile</p></a>  
+      
+      <a style="text-decoration: none;color: white;" href="/logout"><p class="log">Logout</p></a> 
+    
+    </nav>
+
+<h2 style="padding:4.5rem 31rem; color: #ffffff;">Update Profile</h2>
+    <section class="sec">
+      
+        <form method="POST" class="form-control me">
+            {% csrf_token %} {{form|crispy}}
+          
+            <button type="submit" class="btn btn-success">Update</button>
+        
+        </form>
+        
+        <style>
+            h1 {
+                text-align: center;
+                color: #fff;
+            }
+            
+            .me {
+                width: auto;
+                max-width: 26rem;
+                height: auto;
+                margin: auto;
+                background-color: rgb(35, 30, 30, 70%);
+                border-radius: 10px;
+                padding: 2rem;
+                margin-top: 5rem;
+                color: #fff;
+            }
+        </style>
+
+
+
+    </section>
+
+
+
+
+
+<style>
+           nav{
+                position: absolute;
+                width: 70rem;
+                height: 55px;
+                left: 7%;
+                top: 0px;
+                display: flex;
+                justify-content: space-between;
+                color: antiquewhite;
+                background: #D43828;
+                border-radius: 0px 0px 20px 20px;
+                padding: 1rem;        
+               }
+               .sec{
+                position: absolute;
+                width: 1090px;
+                height: auto;
+                left: 8.5%;
+                top: 120px;
+                font-family: 'Inconsolata', monospace;
+                font-weight: 600;
+            
+                border-radius: 20px;
+        }
+       
+</style>
+</div>
+
+{% endblock %}
+
