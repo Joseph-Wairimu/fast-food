@@ -79,7 +79,23 @@ def profile(request):
     context = {'profile':profile}
     return render(request,'profile.html',context)
 
-   
+
+def update_profile(request):
+    current_user = request.user
+    profile = Profile.objects.filter(user=current_user).first()
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            data = form.cleaned_data
+            profile.user = current_user
+            profile.name = data['name']          
+            profile.phone = data['phone']
+            profile.image = data['image']
+            profile.save()
+            return redirect('/profile')
+    else:
+        form = ProfileForm()
+    return render(request, 'update.html', {'form': form})
 
 
 

@@ -25,7 +25,8 @@ class Profile(models.Model):
         self.save()
     def delete_profile(self):
         self.delete()  
-
+    def update_profile(self):
+        self.update()
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
 
