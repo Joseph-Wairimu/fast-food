@@ -14,6 +14,7 @@ def index(request):
     return render(request, 'index.html')
     
 
+@login_required(login_url='login') 
 def menu(request):
     return render(request,'menu.html')
 
@@ -37,6 +38,7 @@ def register(response):
 
 
 
+@login_required(login_url='login') 
 def products(request):
     allProds = []
     catprods = Product.objects.values('category', 'id')
@@ -58,6 +60,8 @@ def products(request):
 
     
 #     return render(request, 'prodview.html', {'product': product})
+
+@login_required(login_url='login') 
 def one_image(request, myid):
     try:
         image = Product.objects.filter(id=myid)
@@ -67,6 +71,7 @@ def one_image(request, myid):
     return render(request, 'prodview.html', {'image': image})
 
 
+@login_required(login_url='login') 
 def profile(request):
     current_user = request.user
     profile = Profile.objects.filter(user=current_user).first()
@@ -79,6 +84,7 @@ def profile(request):
 
 
     
+@login_required(login_url='login') 
 def checkout(request):
     current_user = request.user
     form = OrdersForm(request.POST, request.FILES)
