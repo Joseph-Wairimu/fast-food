@@ -41,7 +41,7 @@
         <div class="product">
             <!--Slideshow starts here -->
             {% for product, range, nSlides in allProds %}
-            <h3 class="my-4">{{product.0.category}}</h3>
+            <h3 style="color: #ffffff; padding-left: 4rem;" class="my-4">{{product.0.category}}</h3>
             <div class="row">
                 <div id="demo{{forloop.counter}}" class="col carousel slide my-3" data-ride="carousel">
                     <ul class="carousel-indicators">
@@ -54,7 +54,7 @@
                         <div class="carousel-item active">
                             {% for i in product %}
                             <div class="col-xs-3 col-sm-3 col-md-3">
-                                <div class="card align-items-center" style="width: 18rem;">
+                                <div class="card align-items-center" style="width: 18rem;background: rgba(35, 30, 30, 0.7); color:white;">
                                     <img src='{{i.image.url}}'>
                                     <div class="card-body">
                                         <h5 class="card-title" id="namepr{{i.id}}">{{i.product_name|slice:"0:20"}}...</h5>

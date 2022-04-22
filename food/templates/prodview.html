@@ -17,7 +17,7 @@
 <body>
     <nav>
         <p class="fast">FastFoody</p>
-        <a href="{%url 'products'%}" style="color: #D43828; text-decoration: none;"> <p>Home</p></a>
+        <a href="{%url 'products'%}" style="color: #ffffff; text-decoration: none;"> <p>Home</p></a>
         <a style="text-decoration: none;color: white;" href="{%url 'menu'%}">
             <p class="menu">Menu</p>
         </a>
@@ -39,11 +39,13 @@
 
     <div class="container my-4 single">
         <div class="row">
-            <div class="col-md-4">
-                <img src="{{image.image.url}}" width="233px" height="300px">
-            </div>
+            {% for image in image %}
+           
+              
+       
 
-            <div class="col-md-8">
+            <div class="col-md-8" style="background: rgba(35, 30, 30, 0.7); color:white;">
+                <img src="{{image.image.url}}" width="233px" height="300px">
                 <h5>{{image.image_name}}</h5>
                 <p><b>Ksh. {{image.price}} </b></p>
                 <p>{{image.desc}}</p>
@@ -51,8 +53,24 @@
                     <center>Click <a href='' class='alert-link'>Here</a> to Order.</center>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
+    <style>
+        nav {
+        position: absolute;
+        width: 70rem;
+        height: 55px;
+        left: 7%;
+        top: 0px;
+        display: flex;
+        justify-content: space-between;
+        color: antiquewhite;
+        background: #D43828;
+        border-radius: 0px 0px 20px 20px;
+        padding: 1rem;
+    }</style>
+    </style>
 </body>
 
 </html>
